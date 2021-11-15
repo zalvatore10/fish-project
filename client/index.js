@@ -1,18 +1,29 @@
 /* eslint-disable no-console */
 /* eslint-disable no-alert */
+
 import './stylesheets/style.css';
 import './stylesheets/mystyles.css';
 
-// Inicializando Script de materialize
-document.addEventListener('DOMContentLoaded', () => {
-  // Inicializando todos los sidenav
-  document.querySelectorAll('.sidenav').forEach((sideNav) => {
-    // eslint-disable-next-line no-undef
-    M.Sidenav.init(sideNav);
+console.log('Webpack Working');
+// Default parameters Es6/2015
+const show = (m = 'que onda') => {
+  alert(m);
+};
+
+show();
+
+function resolveAfter2Seconds() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
   });
-  // Inicializando el dropsown
-  document
-    .querySelectorAll('.dropdown-trigger')
-    // eslint-disable-next-line no-undef
-    .forEach((dropdown) => M.Dropdown.init(dropdown));
-});
+}
+
+async function asyncCall() {
+  console.log('Calling an async function');
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+}
+
+asyncCall();

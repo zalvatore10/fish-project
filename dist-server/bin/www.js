@@ -7,7 +7,7 @@
 
 var app = require("../app");
 
-var debug = require('debug')('projnotes:server');
+var debug = require('debug')('fish-project:server');
 
 var http = require('http');
 /**

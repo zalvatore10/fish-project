@@ -6,7 +6,7 @@ router.get('/', function (req, res, next) {
   res.render('index', {
     title: 'Express',
     author: 'zalva',
-    appName: 'fishapp',
+    appName: 'fishproject',
     company: 'maritima',
   });
 });

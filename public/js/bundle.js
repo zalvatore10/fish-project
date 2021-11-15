@@ -1,1 +1,1 @@
-(()=>{"use strict";document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll(".sidenav").forEach((e=>{M.Sidenav.init(e)})),document.querySelectorAll(".dropdown-trigger").forEach((e=>M.Dropdown.init(e)))}))})();
+(()=>{"use strict";console.log("Webpack Working"),((o="que onda")=>{alert(o)})(),async function(){console.log("Calling an async function");const o=await new Promise((o=>{setTimeout((()=>{o("resolved")}),2e3)}));console.log(o)}()})();

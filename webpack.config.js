@@ -1,53 +1,53 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
-  //establecer el modo de este archivo
+  // 1. Se estrablece modo desarrollo
   mode: 'development',
-  //1.- espesificar el archivo de entrada
+  // 2. Especificar archivo entrada
   entry: './client/index.js',
-  //2.- espesificando la salida
+  // 3. Salida de empaquetado
   output: {
-    //3.- ruta absoluta
+    // 4. Ruta absoluta salida
     path: path.join(__dirname, 'public'),
-    //4.- nombre del archivo de salida
+    // 5. Nombre archivo salida
     filename: 'js/bundle.js',
-    //5.- ruta del path publico
+    // 6. Servidor desarrollo, ruta path publico
     publicPath: '/',
   },
-
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js$ /,
         exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              [
-                '@babel/preset-env',
-                {
-                  modules: false,
-                  useBuiltIns: 'usage',
-                  //'target':'>0.25%, not dead'
-                  targets: { chrome: '80' },
-                  corejs: 3,
-                },
-              ],
-            ],
-            plugins: [
-              [
-                'module-resolver',
-                {
-                  root: ['./'],
-                  alias: {
-                    '@client': './client',
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                [
+                  '@babel/preset-env',
+                  {
+                    modules: false,
+                    useBuiltIns: 'usage',
+                    targets: { chrome: '80' },
+                    corejs: 3,
                   },
-                },
+                ],
               ],
-            ],
+              plugins: [
+                [
+                  'module-resolver',
+                  {
+                    root: ['./'],
+                    alias: {
+                      '@client': './client',
+                    },
+                  },
+                ],
+              ],
+            },
           },
-        },
+        ],
       },
       {
         test: /\.css$/,
