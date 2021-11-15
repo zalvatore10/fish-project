@@ -6,7 +6,7 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
 import indexRouter from '@babel/index';
-import userRouter from '@s-routes/users';
+import userRouter from '@s-routes/user';
 
 // webpack modules
 import Webpack from 'webpack';
