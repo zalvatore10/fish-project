@@ -11,9 +11,4 @@ router.get('/', function (req, res, next) {
   });
 });
 
-//agregando nueva ruta
-router.get('/greeting', function (req, res, next) {
-  res.status(200).json({ message: 'hola campeon' });
-});
-
 module.exports = router;

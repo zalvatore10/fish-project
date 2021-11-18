@@ -5,7 +5,7 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
-import indexRouter from '@s-routes/index';
+import Router from '@s-routes/index';
 import usersRouter from '@s-routes/users';
 
 // importar modulos de webpack
@@ -56,7 +56,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-app.use('/', indexRouter);
+app.use('/', Router);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
