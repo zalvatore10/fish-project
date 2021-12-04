@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
     title: 'Express',
     author: 'Salvador-Itxcoatl-Angel',
     appName: 'fishproject',
-    company: 'maritima',
+    company: 'compañia maritima',
   });
 });
 
