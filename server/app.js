@@ -23,7 +23,7 @@ const app = express();
 
 // verficiar modo ejecucion de la aplicacion
 if (env === 'development') {
-  console.log('> Excecuting in Development Mode: Webpack hot Reloading');
+  console.log('> Excecuting in Development Mode: Webpack ejecutando');
   // ruta del Hot module replasmen
   // reload=true: habilita recarga fronted al tener cambios en codigo fuente del fronted
   // timeout=1000: Tiempo espera recarga

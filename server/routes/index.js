@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
   res.render('index', {
     title: 'Express',
-    author: 'zalva',
+    author: 'Salvador-Itxcoatl-Angel',
     appName: 'fishproject',
     company: 'maritima',
   });
